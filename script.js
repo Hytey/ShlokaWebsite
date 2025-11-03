@@ -1,402 +1,336 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+  const welcomeHeading = document.getElementById('welcomeHeading')
+        const welcomeHeadingInside = `यथा पुष्पं न पात्येत वासितं हि समन्ततः।
+        \n
+        तथा सत्पुरुषैर्नित्यं कार्यं यत्सर्वहिताय वै॥`
+        const guitarButton = document.getElementById('guitarButton')
+        const artButton = document.getElementById('artButton')
+        const contactSection = document.getElementById('contact')
 
-
-
-
-         #dhruvLogo {
-            font-family: 'Story Script';
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-
-            box-shadow: 0 0 15px rgba(0, 255, 200, 0.6),
-                0 0 30px rgba(0, 255, 200, 0.3);
-            margin: 5px;
-            padding: 12px 12px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgb(255, 14, 255), rgb(0, 195, 255));
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 2px;
-
-        }
-
-        #logoContainer {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #logoTextContainer {
-            margin-left: 10px;
-        }
-
-        #logoTextContainer h2 {
-            font-family: 'Cinzel Decorative';
-            font-size: 16px;
-            color: white;
-        }
-
-        #logoTextContainer p {
-            color: rgba(177, 177, 177, 0.418);
-        }
-
-        #topbar {
-            position: fixed;
-            z-index: 100;
-            backdrop-filter: blur(8px);
-            margin: 10px auto;
-            width: 92%;
-            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
-
-        }
-
-        nav {
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 18px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 92%;
-            max-width: 1100px;
-            padding: 10px 18px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            z-index: 999;
-            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
-        }
-
-        #navLinks a {
-            all: unset;
-            display: inline-block;
-            font-family: 'Roboto';
-            font-weight: 800;
-            color: white;
-            margin: 0 15px;
-            transition: all 0.2s ease-in;
-            z-index: 101;
-        }
-
-        #navLinks a:hover {
-            transform: translateY(-3px);
-            text-shadow: 0 0 5px aqua;
-        }
-         main {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            max-width: 1400px;
-            margin: 180px auto 10px auto;
-            padding: 0 20px;
-        }
-
-        #welcomeHeading {
-            font-size: 50px;
-            text-align: center;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc);
-            background-clip: text;
-            color: transparent;
-            font-family: 'Lato';
-            height: 180px;
-            margin: 20px auto 0px auto;
-
-        }
-
-        #welcomeParagraph {
-            font-size: 15px;
-            color: rgb(155, 155, 155);
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-
-
-
-
-
-
-
-#forBackground{
-    z-index: -2222;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    height: 100vh;
-
-    width: 100vw;
-     background: linear-gradient(rgb(36, 36, 36),#0d0d0d,black);
-}
-#actualWelcome{
-    text-align: center;
-    font-size: 70px;
-    color: white;
-}
-
-.features {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding: 20px;
-  justify-content: flex-start;
-  flex: 1;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  width: 100%;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  transition: 0.3s ease;
-  color: white;
-  cursor: pointer;
-}
-.feature-card h3{
-height: 40px;
-margin: 5px;
-}
-.feature-card p{
-    height: 40px;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
-}
-
-.icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.learn-btn {
-  margin-top: 15px;
-  background: linear-gradient(135deg, #7f00ff, #00e5ff);
-  border: none;
-  padding: 10px 18px;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.learn-btn:hover {
-  opacity: 0.85;
-}
-svg{
-    margin: 10px;
-    color: aqua;
-}
-
-
-
-  /* Panel Navigation */
-        .content-panel {
-            display: none; /* Hidden by default */
-            width: 100%;
-            animation: fadeIn 0.5s ease;
-        }
-        .content-panel.active {
-            display: block; /* Shown when active */
-        }
-
-        .tool-panel {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Tool Titles */
-        .tool-title {
-            font-family: 'Lato', sans-serif;
-            font-size: 40px;
-            font-weight: 800;
-            color: white;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-        .tool-subtitle {
-            font-family: 'Noto Serif Devanagari', serif;
-            font-size: 20px;
-            text-align: center;
-            color: #00e5ff;
-            margin-bottom: 30px;
-        }
-        .font-devanagari {
-            font-family: 'Noto Serif Devanagari', serif;
-        }
-
-        /* AI Tool Container */
-        .ai-tool-container {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            padding: 24px;
-        }
-
-        /* AI Response Window */
-        .ai-response {
-            min-height: 100px;
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 16px;
-            background-color: #0d0d0d;
-            color: #d1d5db;
-            line-height: 1.6;
-            font-family: 'Roboto', sans-serif;
-        }
-        .ai-response.hidden {
-            display: none;
-        }
-        .ai-response p {
-            margin-bottom: 0.75rem;
-        }
-        .ai-response strong {
-            color: #00e5ff;
-            font-weight: 600;
-        }
-        .ai-response ul, .ai-response ol {
-            margin-left: 1.25rem;
-            margin-bottom: 0.75rem;
-            list-style-type: disc;
-        }
-        .ai-response li {
-            margin-bottom: 0.25rem;
-        }
-        /* User/AI Messages */
-        .user-message {
-            text-align: right;
-            background: rgba(0, 229, 255, 0.1);
-            padding: 10px;
-            border-radius: 8px 8px 0 8px;
-            margin-left: 20%;
-            margin-bottom: 10px;
-            color: white; /* Ensure text is white */
-        }
-        .user-message p {
-             margin-bottom: 0; /* Remove extra margin */
-        }
-        .ai-message {
-            text-align: left;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px;
-            border-radius: 0 8px 8px 8px;
-            margin-right: 20%;
-            margin-bottom: 10px;
-        }
-        .ai-message p {
-            margin-bottom: 0; /* Remove extra margin */
-        }
+ 
         
-        /* AI Input Fields */
-        .ai-input-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .ai-input, .ai-textarea {
-            flex-grow: 1;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 12px 16px;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-        }
-        .ai-input::placeholder, .ai-textarea::placeholder {
-            color: #777;
-        }
-        .ai-textarea {
-            width: 100%;
-            resize: vertical;
-        }
-        .ai-label {
-            display: block;
-            color: #d1d5db;
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 10px;
-        }
+        let Random_Variable = 0;
 
-        /* AI Button */
-        .ai-button {
-            background: linear-gradient(135deg, #7f00ff, #00e5ff);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.25s;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 120px; /* For loader */
-            height: 48px; /* Match input height */
-        }
-        .ai-button:hover {
-            opacity: 0.85;
-        }
-        .ai-button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
 
-        /* Inline Link */
-        .nav-link-inline {
-            color: #00e5ff;
-            text-decoration: underline;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /* Loader */
-        .loader {
-            width: 20px;
-            height: 20px;
-            border: 3px solid #FFF;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
-            animation: rotation 1s linear infinite;
-        }
-        .hidden {
-            display: none;
-        }
-        @keyframes rotation {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
+        function Writing_Function() {
+            if (welcomeHeading.textContent.length < welcomeHeadingInside.length) {
+                // console.log(welcomeHeadingInside.innerText)
+                welcomeHeading.textContent += welcomeHeadingInside[Random_Variable]
+                Random_Variable++
+                // console.log(window.scrollY)
+            } else {
             }
         }
+        const Writing_Interval = setInterval(Writing_Function, 30)
+
+
+
+
+          // --- Gemini AI API Logic ---
+            const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
+            const API_KEY = "AIzaSyDnGd_wGuwRvTNjQQaIHFOjNu2oOZQEobo"; // Leave blank, will be populated at runtime
+            const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
+
+            // Helper: Toggle loader
+            function toggleLoader(button, isLoading) {
+                const text = button.querySelector('.button-text');
+                const loader = button.querySelector('.button-loader');
+                if (isLoading) {
+                    if(text) text.classList.add('hidden');
+                    if(loader) loader.classList.remove('hidden');
+                    button.disabled = true;
+                } else {
+                    if(text) text.classList.remove('hidden');
+                    if(loader) loader.classList.add('hidden');
+                    button.disabled = false;
+                }
+            }
+            
+            // saare ai code ko format krme ke lie
+            function formatAIResponse(text) {
+                // Convert markdown-like **bold** to <strong>
+                let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                
+                // Convert markdown-like *italic* to <em>
+                html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                
+                // Convert newlines to paragraphs
+                html = html.split('\n\n').map(p => `<p class="ai-message">${p.replace(/\n/g, '<br>')}</p>`).join('');
+
+                // Fix stray <p> tags if split was not perfect
+                html = html.replace(/<p class="ai-message"><\/p>/g, '');
+                
+                return html;
+            }
+
+            // Helper: Sanitize text to prevent HTML injection
+            function sanitize(text) {
+                const el = document.createElement('div');
+                el.textContent = text;
+                return el.innerHTML;
+            }
+            
+            // Helper: Exponential backoff fetch
+            async function fetchWithBackoff(url, options, retries = 3, delay = 1000) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        if (response.status === 429 && retries > 0) { // Throttling
+                            await new Promise(res => setTimeout(res, delay));
+                            return fetchWithBackoff(url, options, retries - 1, delay * 2);
+                        }
+                        const errorBody = await response.json();
+                        throw new Error(`API Error: ${response.status} ${response.statusText} - ${errorBody?.error?.message || 'Unknown error'}`);
+                    }
+                    return response.json();
+                } catch (error) {
+                    if (retries > 0 && !(error.message.startsWith("API Error"))) { // Network errors
+                        await new Promise(res => setTimeout(res, delay));
+                        return fetchWithBackoff(url, options, retries - 1, delay * 2);
+                    }
+                    console.error(error); // Log the error
+                    throw error;
+                }
+            }
+
+            // Core AI call function
+            async function callGemini(systemInstruction, userQuery, useGoogleSearch = false) {
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemInstruction }]
+                    },
+                    tools: useGoogleSearch ? [{ "google_search": {} }] : []
+                };
+
+                const result = await fetchWithBackoff(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const candidate = result.candidates?.[0]; //used optional chaining for safety hehe
+                if (candidate && candidate.content?.parts?.[0]?.text) { //agar text exist krta hai to return kr denge
+                    return candidate.content.parts[0].text; // Return raw text for formatting
+                } else {
+                    let reason = "No valid response from AI.";
+                    if (candidate?.finishReason === "SAFETY") {
+                        reason = "Response blocked due to safety settings.";
+                    } else if (candidate?.finishReason === "RECITATION") {
+                        reason = "Response blocked due to recitation policy.";
+                    } else if (!candidate) {
+                        reason = `No response candidate found. Full result: ${JSON.stringify(result, null, 2)}`;
+                    }
+                    throw new Error(reason);
+                }
+            }
+            
+            // --- Tool 1: AI Acharya ---
+            const acharyaInput = document.getElementById('acharya-input');
+            const acharyaButton = document.getElementById('acharya-button');
+            const acharyaChatWindow = document.getElementById('acharya-chat-window');
+
+            const acharyaSystemPrompt = `You are "AI Acharya," an expert in Sanskrit, Vedic philosophy (Advaita, Dvaita, etc.), and Hindu scriptures (Vedas, Upanishads, Puranas, Gita). Your persona is that of a wise, patient, and encouraging teacher (Guru).
+            Your task is to:
+            1.  Receive a question from the user.
+            2.  Provide a clear, insightful, and easy-to-understand explanation, in Hinglish (mix of Hindi and English) if the user's query suggests it.
+            3.  If it's a shloka, provide the Devanagari script, a word-by-word breakdown, and the philosophical meaning.
+            4.  Maintain a respectful, scholarly, yet approachable tone.
+            5.  Format your response in simple markdown (bold, lists).
+            6.  Keep responses concise but comprehensive. End with an encouraging closing.`;
+
+            async function handleAcharyaQuery() {
+                const query = acharyaInput.value;
+                if (!query.trim()) return; //empty input ke lie
+
+                toggleLoader(acharyaButton, true);
+                acharyaInput.value = '';
+                // Add user message to chat
+                acharyaChatWindow.innerHTML += `<div class="user-message"><p><strong>You:</strong> ${sanitize(query)}</p></div>`;
+                acharyaChatWindow.scrollTop = acharyaChatWindow.scrollHeight;
+
+                try {
+                    const rawResponse = await callGemini(acharyaSystemPrompt, query);
+                    const responseHtml = formatAIResponse(rawResponse);
+                    acharyaChatWindow.innerHTML += responseHtml;
+                } catch (error) {
+                    console.error("Acharya Error:", error);
+                    acharyaChatWindow.innerHTML += `<div class="ai-message" style="color: #ff8a8a;"><p><strong>Acharya:</strong> My apologies, I encountered an error: ${error.message}</p></div>`;
+                } finally {
+                    toggleLoader(acharyaButton, false);
+                    acharyaChatWindow.scrollTop = acharyaChatWindow.scrollHeight;
+                }
+            }
+            if(acharyaButton) acharyaButton.addEventListener('click', handleAcharyaQuery);
+            if(acharyaInput) acharyaInput.addEventListener('keypress', (e) => {
+                if(e.key === 'Enter' && !e.shiftKey) { // Press Enter to send
+                    e.preventDefault();
+                    handleAcharyaQuery();
+                }
+            });
+
+            // --- Tool 2: Concept Deconstructor ---
+            const deconButton = document.getElementById('decon-button');
+            const deconSystemPrompt = `You are a "Concept Deconstructor." Your task is to take a complex topic from the user and explain it using the 'Neti, Neti' ("Not this, Not this") method, inspired by the Nirvana Shatakam.
+            1.  Start by defining what the concept is *not*. (e.g., "AI is not human intelligence. It is not consciousness.")
+            2.  Peel away these layers of misunderstanding.
+            3.  Conclude with a simple, core definition of what the concept *is*.
+            4.  Format your response in simple markdown (bold, lists).
+            5.  Be clear and concise.`;
+
+            if(deconButton) deconButton.addEventListener('click', async () => {
+                const query = document.getElementById('decon-input').value;
+                if (!query.trim()) return;
+                
+                toggleLoader(deconButton, true);
+                const responseDiv = document.getElementById('decon-response');
+                responseDiv.classList.add('hidden');
+
+                try {
+                    const rawResponse = await callGemini(deconSystemPrompt, `Deconstruct the concept: ${query}`);
+                    responseDiv.innerHTML = formatAIResponse(rawResponse);
+                    responseDiv.classList.remove('hidden');
+                } catch (error) {
+                    console.error("Deconstructor Error:", error);
+                    responseDiv.innerHTML = `<p class="ai-message" style="color: #ff8a8a;">An error occurred: ${error.message}</p>`;
+                    responseDiv.classList.remove('hidden');
+                } finally {
+                    toggleLoader(deconButton, false);
+                }
+            });
+
+            // --- Tool 3: Ethical Simulator ---
+            const dilemmaButton = document.getElementById('dilemma-button');
+            const dilemmaSystemPrompt = `You are an "Ethical Simulator." Your goal is to help the user think about the 'नीतिमार्ग' (path of ethics).
+            1.  Generate a short, modern, practical ethical dilemma (2-3 sentences).
+            2.  The dilemma should be relatable (e.g., work, school, personal life).
+            3.  Do NOT provide an answer.
+            4.  End by prompting the user to think about the right course of action.
+            5.  Format as a single paragraph.`;
+            
+            if(dilemmaButton) dilemmaButton.addEventListener('click', async () => {
+                toggleLoader(dilemmaButton, true);
+                const responseDiv = document.getElementById('dilemma-response');
+                const followUpDiv = document.getElementById('dilemma-follow-up');
+                responseDiv.classList.add('hidden');
+                followUpDiv.classList.add('hidden');
+
+                try {
+                    const rawResponse = await callGemini(dilemmaSystemPrompt, "Give me an ethical dilemma.");
+                    responseDiv.innerHTML = formatAIResponse(rawResponse);
+                    responseDiv.classList.remove('hidden');
+                    followUpDiv.classList.remove('hidden');
+                } catch (error) {
+                    console.error("Dilemma Error:", error);
+                    responseDiv.innerHTML = `<p class="ai-message" style="color: #ff8a8a;">An error occurred: ${error.message}</p>`;
+                    responseDiv.classList.remove('hidden');
+                } finally {
+                    toggleLoader(dilemmaButton, false);
+                }
+            });
+
+            // --- Tool 4: AI Summarizer ---
+            const summaryButton = document.getElementById('summary-button');
+            const summarySystemPrompt = `You are an "AI Text Summarizer." Your goal is to distill long text into its core essence, making it easy to share, inspired by the shloka "for the welfare of all."
+            1.  Receive a block of text from the user.
+            2.  Provide a concise summary of the main points.
+            3.  Use clear bullet points for key takeaways.
+            4.  The summary should be neutral and objective.
+            5.  Format your response in simple markdown.`;
+            
+            if(summaryButton) summaryButton.addEventListener('click', async () => {
+                const query = document.getElementById('summary-input').value;
+                if (!query.trim()) return;
+                
+                toggleLoader(summaryButton, true);
+                const responseDiv = document.getElementById('summary-response');
+                responseDiv.classList.add('hidden');
+
+                try {
+                    const rawResponse = await callGemini(summarySystemPrompt, `Summarize this text: ${query}`);
+                    responseDiv.innerHTML = formatAIResponse(rawResponse);
+                    responseDiv.classList.remove('hidden');
+                } catch (error) {
+                    console.error("Summarizer Error:", error);
+                    responseDiv.innerHTML = `<p class="ai-message" style="color: #ff8a8a;">An error occurred: ${error.message}</p>`;
+                    responseDiv.classList.remove('hidden');
+                } finally {
+                    toggleLoader(summaryButton, false);
+                }
+            });
+
+            // --- Tool 5: Source Finder ---
+            const sourceButton = document.getElementById('source-button');
+            const sourceSystemPrompt = `You are a "Scriptural Source Finder," an expert librarian of Vedic and Hindu texts. You are connected to Google Search.
+            1.  Receive a user's query about a concept.
+            2.  Use Google Search to find the primary scriptural sources (Upanishads, Gita, Puranas, Vedas, etc.) for that concept.
+            3.  Present your findings as a list. For each source, provide the text (e.g., "Katha Upanishad") and a brief quote or explanation of how it relates to the concept.
+            4.  Be accurate and scholarly. Cite your sources clearly.
+            5.  Format in simple markdown.`;
+            
+            if(sourceButton) sourceButton.addEventListener('click', async () => {
+                const query = document.getElementById('source-input').value;
+                
+                toggleLoader(sourceButton, true);
+                const responseDiv = document.getElementById('source-response');
+                responseDiv.classList.add('hidden');
+
+                try {
+                    const rawResponse = await callGemini(sourceSystemPrompt, query, true); // Enable Google Search
+                    responseDiv.innerHTML = formatAIResponse(rawResponse);
+                    responseDiv.classList.remove('hidden');
+                } catch (error) {
+                    console.error("Source Finder Error:", error);
+                    responseDiv.innerHTML = `<p class="ai-message" style="color: #ff8a8a;">An error occurred: ${error.message}</p>`;
+                    responseDiv.classList.remove('hidden');
+                } finally {
+                    toggleLoader(sourceButton, false);
+                }
+            });
+
+        
+
+
+
+
+            //for navigation 
+             const navLinks = document.querySelectorAll('.nav-link, .nav-link-card, .nav-link-inline');
+            const contentPanels = document.querySelectorAll('.content-panel');
+            const mainNavLinks = document.querySelectorAll('nav .nav-link');
+
+            function navigateTo(targetId) {
+                // Hide all panels
+                contentPanels.forEach(panel => panel.classList.remove('active'));
+                
+                // Show target panel
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                } else {
+                    console.error(`Target panel #${targetId} not found.`);
+                    // Show home if target not found
+                    document.getElementById('home').classList.add('active');
+                    targetId = 'home';
+                }
+
+                // Update nav link styles
+                mainNavLinks.forEach(link => {
+                    if (link.dataset.target === targetId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                // Update URL hash
+                window.location.hash = targetId;
+            }
+
+            // Handle clicks on all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor jump
+                    const targetId = link.dataset.target;
+                    navigateTo(targetId);
+                    // Scroll to top of main content area
+                    document.querySelector('main').scrollTop = 0;
+                });
+            });
