@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="forBackground"></div>
+    <nav>
+        <div id="logoContainer">
+            <div id="dhruvLogo">Learn.AI</div>
+            <div id="logoTextContainer">
+                <h2>ज्ञानं परमं ध्येयम्</h2>
+                <p>enhance your learning</p>
+            </div>
+        </div>
+        <div id="navLinks">
+             <a href="#home" class="nav-link" data-target="home">Home</a>
+            <a href="#acharya" class="nav-link" data-target="acharya">AI Acharya</a>
+            <a href="#method" class="nav-link" data-target="method">Deconstructor</a>
+            <a href="#goal" class="nav-link" data-target="goal">Simulator</a>
+            <a href="#mission" class="nav-link" data-target="mission">Summarizer</a>
+            <a href="#foundation" class="nav-link" data-target="foundation">Source Finder</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="content-panel active">
+        <div id="welcomeContainer">
+            <h1 id="actualWelcome">Welcome To Learn.AI</h1>
+            <div class="gradient-text" id="welcomeHeading"></div>
+            <p id="welcomeParagraph">This is our mission: to share knowledge for the benefit of everyone.</p>
+        </div>
+
+        <section class="features">
+
+            <div class="feature-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-blocks-icon lucide-blocks">
+                    <path
+                        d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" />
+                    <rect x="14" y="2" width="8" height="8" rx="1" />
+                </svg>
+                <h3>Concept Deconstructor</h3>
+                <p>Helps understand complex topics</p>
+                <button class="learn-btn" onclick="window.location.href = '#acharya'">Learn More</button>
+            </div>
+
+            <div class="feature-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-brain-circuit-icon lucide-brain-circuit">
+                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                    <path d="M9 13a4.5 4.5 0 0 0 3-4" />
+                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                    <path d="M6 18a4 4 0 0 1-1.967-.516" />
+                    <path d="M12 13h4" />
+                    <path d="M12 18h6a2 2 0 0 1 2 2v1" />
+                    <path d="M12 8h8" />
+                    <path d="M16 8V5a2 2 0 0 1 2-2" />
+                    <circle cx="16" cy="13" r=".5" />
+                    <circle cx="18" cy="3" r=".5" />
+                    <circle cx="20" cy="21" r=".5" />
+                    <circle cx="20" cy="8" r=".5" />
+                </svg>
+                <h3>AI Acharya</h3>
+                <p>Ask Brainstorming questions</p>
+                <button class="learn-btn" onclick="showAdaptive()">Learn More</button>
+            </div>
+
+            <div class="feature-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-scale-icon lucide-scale">
+                    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+                    <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+                    <path d="M7 21h10" />
+                    <path d="M12 3v18" />
+                    <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+                </svg>
+                <h3>Ethics Simulator</h3>
+                <p>Explore Moral dilemas</p>
+                <button class="learn-btn" onclick="showAdaptive()">Learn More</button>
+            </div>
+            <div class="feature-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-notepad-text-icon lucide-notepad-text">
+                    <path d="M8 2v4" />
+                    <path d="M12 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="16" height="18" x="4" y="4" rx="2" />
+                    <path d="M8 10h6" />
+                    <path d="M8 14h8" />
+                    <path d="M8 18h5" />
+                </svg>
+                <h3>AI Summarizer</h3>
+                <p>Distill long text for welface of all</p>
+                <button class="learn-btn" onclick="showAdaptive()">Learn More</button>
+            </div>
+
+            <div class="feature-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-book-open-check-icon lucide-book-open-check">
+                    <path d="M12 21V7" />
+                    <path d="m16 12 2 2 4-4" />
+                    <path
+                        d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3" />
+                </svg>
+                <h3>Source Finder</h3>
+                <p>Find original source of the text</p>
+                <button class="learn-btn" onclick="showAdaptive()">Learn More</button>
+            </div>
+
+
+        </section>
+</section>
+      
+        <section id="acharya" class="content-panel tool-panel">
+            <h1 class="tool-title">AI Acharya</h1>
+            <p class="tool-subtitle font-devanagari">चक्षुरध्ययनम्, वचनं श्रवणम्, सर्वमेककृतम्" संग्रहकस्य यन्त्र, वर्तमानस्य गति, आधारस्य शिल्प</p>
+            
+            <div class="ai-tool-container">
+                <div id="acharya-chat-window" class="ai-response">
+                    <p class="ai-message">Namaste! I am the AI Acharya. Ask me any philosophical or educational question.</p>
+                </div>
+                <div class="ai-input-container">
+                    <input type="text" id="acharya-input" class="ai-input" placeholder="Ask about Dharma, Karma, or any shloka...">
+                    <button id="acharya-button" class="ai-button">
+                        <span class="button-text">Send</span>
+                        <span class="loader button-loader hidden"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 3: Concept Deconstructor (Method) -->
+        <section id="method" class="content-panel tool-panel">
+            <h1 class="tool-title">Concept Deconstructor</h1>
+            <p class="tool-subtitle font-devanagari">"न च प्राण संज्ञो..." (The Method of Neti, Neti)</p>
+            
+            <div class="ai-tool-container">
+                <label for="decon-input" class="ai-label">Enter a complex topic to deconstruct:</label>
+                <input type="text" id="decon-input" class="ai-input" placeholder="e.g., 'Blockchain', 'Advaita Vedanta'">
+                <button id="decon-button" class="ai-button">
+                    <span class="button-text">Deconstruct</span>
+                    <span class="loader button-loader hidden"></span>
+                </button>
+                <div id="decon-response" class="ai-response hidden"></div>
+            </div>
+        </section>
+
+        <!-- Panel 4: Ethical Simulator (Goal) -->
+        <section id="goal" class="content-panel tool-panel">
+            <h1 class="tool-title">Ethical Simulator</h1>
+            <p class="tool-subtitle font-devanagari">"नीतिमार्गकोविदं..." (Become an expert in ethics)</p>
+            
+            <div class="ai-tool-container">
+                <p class="ai-label">Click the button to receive an ethical dilemma.</p>
+                <button id="dilemma-button" class="ai-button">
+                    <span class="button-text">Give me a Dilemma</span>
+                    <span class="loader button-loader hidden"></span>
+                </button>
+                <div id="dilemma-response" class="ai-response hidden"></div>
+                <div id="dilemma-follow-up" class="hidden" style="margin-top: 15px;">
+                     <p class="ai-label">Now, go to the <a data-target="acharya" class="nav-link-inline">AI Acharya</a> and discuss your reasoning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 5: AI Summarizer (Mission) -->
+        <section id="mission" class="content-panel tool-panel">
+            <h1 class="tool-title">AI Text Summarizer</h1>
+            <p class="tool-subtitle font-devanagari">"यथा पुष्पं... सर्वहिताय वै"</p>
+            
+            <div class="ai-tool-container">
+                <label for="summary-input" class="ai-label">Paste your text below to summarize it:</label>
+                <textarea id="summary-input" rows="8" class="ai-textarea" placeholder="Paste a long article, notes, or any text here..."></textarea>
+                <button id="summary-button" class="ai-button">
+                    <span class="button-text">Summarize</span>
+                    <span class="loader button-loader hidden"></span>
+                </button>
+                <div id="summary-response" class="ai-response hidden"></div>
+            </div>
+        </section>
+
+        <!-- Panel 6: Source Finder (Foundation) -->
+        <section id="foundation" class="content-panel tool-panel">
+            <h1 class="tool-title">Scriptural Source Finder</h1>
+            <p class="tool-subtitle font-devanagari">"श्रुतिव्रातसारं..." (The essence of all scriptures)</p>
+            
+            <div class="ai-tool-container">
+                <label for="source-input" class="ai-label">What concept do you want to trace to its source?</label>
+                <input type="text" id="source-input" class="ai-input" placeholder="e.g., 'Origin of Atman concept'">
+                <button id="source-button" class="ai-button">
+                    <span class="button-text">Find Sources</span>
+                    <span class="loader button-loader hidden"></span>
+                </button>
+                <div id="source-response" class="ai-response hidden"></div>
+            </div>
+        </section>
+        </main>
+        <script src="script.js"></script>
+</body>
+
+</html>
